@@ -31,8 +31,6 @@ stop_words = set(nltk.corpus.stopwords.words('english'))
 #there is the filetred list
 filtered_list=[w for w in new_words if w not in stop_words ]
 print(filtered_list)
-in the next six blocks we will make list of 6 categories.these list will contain few words which are relatable to the category of bill.for instance suppose the above bill of the restuarant would include words like kitchen,food or restuarant.so we will compare it list category and likewise allot the rescpective category.
-#entertainment
 entertainment = [] 
 for syn in wordnet.synsets("entertainment"): 
     for l in syn.lemmas(): 
@@ -182,7 +180,7 @@ entertainment[entertainment['amount']==entertainment['amount'].max()]
 entertainment.dtypes
 
 entertainment.isnull().any()
-.
+
 investment.isnull().any()
 shopping.isnull()
 #similary we can check for the other category
